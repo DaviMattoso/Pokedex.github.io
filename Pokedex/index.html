@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Links -->
+    <link rel="icon" href="./Favicons/favicon-16x16.png"> <!– definir icon do site–>
+    <link rel="stylesheet" href="./css/style.css"> 
+
+    <!-- Script js -->
+    <script defer src="./js/script.js"></script>
+
+</head>
+<body>
+    
+    <main>
+     <img src="" alt="pokemon", class="pokemon_image"> <!– imagem do pokemon (gif)–>
+
+     <h1 class="pokemon_data"> <!– h1 + class par aos dados dos pokemons –>
+        <span class="pokemon__number"></span> - <!-- Exibe o número do Pokémon --> <!-- Insere um hífen como separador entre o número e o nome --> 
+        <span class="pokemon__name"></span> <!-- Exibe o nome do Pokémon -->
+     </h1>
+
+     <form class="form"> <!-- Area para pesquisar o nome dos pokemons-->
+        <input
+          type="search" 
+          class="input__search"
+          placeholder="Name or Number"
+          required
+        />
+      </form>
+
+      <div class="buttons"> <!-- Classe para definir os botoes de Prev e Next JUNTOS-->
+        <button class="button btn-prev">Prev &lt;</button> <!-- btn prev com simb em codigo de entenidade-->
+        <button class="button btn-next">Next &gt;</button> <!-- btn next com simb em codigo de entenidade-->
+      </div>
+
+      <img src="./Imagens/pokedex.png" alt="pokedex" class="pokedex"> <!-- importa a img da pokedex -->
+    </main>
+
+</body>
+</html>

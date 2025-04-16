@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap'); /* importar fonte do google*/
+
+* { 
+    /* Reseta estilos padrão */
+    margin: 0; /* Remove margens */
+    padding: 0%; /* Remove espaçamentos internos */
+    box-sizing: border-box; /* Inclui bordas no tamanho total */
+    font-family: 'Oxanium', cursive; /* Define a fonte padrão */
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff); /* Cria um degrade do azul ao branco*/
+    min-height: 100vh; /* Define a proporção para tela completa*/
+  }
+
+main {
+    display: inline-block; /* Combina propriedades de inline e block */
+    margin-top: 2%; /* Adiciona margem superior de 2% da largura do contêiner */
+    padding: 15px; /* Centraliza a img */
+    position: relative;
+}
+
+/* Configuração para comportamento da img (scroll)*/
+.pokedex {
+    width: 100%; /* Ocupar 100% do espaço que estiver disponivel, baseado no tamanho da immg pela tag "main"*/
+    max-width: 425px; 
+}
+
+/* Config das imangens dos pokemons dentro da pokedex */
+/* Por que utilizar % e não PX? Porque a % nao vai variar independente da proporção da tela*/
+.pokemon_image {
+    position: absolute;
+    bottom: 55%; /* Função para respeitar o espaço da img BASEADA na div MAIN */
+    left: 50%; /* Função para respeitar o espaço da img BASEADA na div MAIN */
+    transform: translate(-63%, 20%); /* Referente ao tamanho da IMG */
+    height: 18%; /* Posição do pokemon */ 
+}
+
+/* Config visual das informaçoes do pokemon */
+.pokemon_data {
+    position: absolute; 
+    font-weight: 600;
+    color: #aaaaaa; 
+    top: 54.5%; /* Def de altura (colocar no display) */
+    right: 27%; /* Centralizar no display */
+    font-size: clamp(8px, 5vw, 25px); /*clamp(min, desejavel, max); função ára definir tamaño do texto do nome do pok em relação a tela*/
+
+}
+
+/* Config do nome do pokemon*/
+.pokemon_name {
+    color: #3a444d; /* Cor do nome do pokemon*/
+    text-transform: capitalize; /* Primeira letra do nome sempre maiuscula*/
+}
+
+/* Barra de pesquisa dos pokemons*/
+.form {
+    position: absolute;
+    width: 65%; /* Ocupar 65% da tela definida*/
+    top: 65%; /* Posicionamento da barra de pesquisa*/
+    left: 13.5%; /* Posicionamento da barra de pesquisa*/
+  }
+  
+/* Config da barra de pesquisa*/
+  .input__search {
+    width: 100%; /* Ocupar 100% da tela definida*/
+    padding: 4%; /* Tamanho da caixa que a companha a proporção da tela*/
+    outline: none; /* Tirar a borda ao selecionar a barra de pesquisa*/
+    border: 2px solid #333; /* Definir tamanho e cor da borda ao clicar para pesquisar*/
+    border-radius: 5px; /* Arredondar borda*/ 
+    font-weight: 600; /* Fonte en negrito (definido em 600)*/
+    color: #3a444d; /* Cor da fonte*/
+    font-size: clamp(8px, 5vw, 1rem); /* Estilo de fonte seguido o .pokemon_data*/
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333; /*x, y, tamanho e cor da sombra;*/
+  }
+  
+  /* Config dos botões Prev e Next*/
+  .buttons {
+    position: absolute;
+    bottom: 10%; /* Tamanho do botão*/
+    left: 50%; /* Posição do botão*/
+    width: 65%; /* Posição do botão*/
+    transform: translate(-57%, 0); /*Move a transformação na direção e distância da translação*/
+    display: flex; /* Deixar os botóes um do lado do outro*/
+    gap: 20px; /* Distancia de separação entre um btn e outro*/
+  }
+
+/* Config do estilo da class button*/
+.button {
+    width: 50%; /* Divisão de 50% do españo entre eles, para centralizar*/
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000; /*x, y, tamanho e cor da sombra; se repete para uma sombra da primeira sombra*/
+}
+
+/* Config para quando pressionar o botão*/
+.button:active{
+    box-shadow: inset -4px -4px 0 #222; /* Sombra de como se obotão fosse apertado*/
+    font-size: 0.9rem; /* A fonte acompanha a profundidade criada pelo box-shadow*/
+}
